@@ -14,6 +14,14 @@ I build governed, evaluation-driven AI systems that reason over operational data
 
 **Outcome.** The repository contains the working event-processing pipeline, a React dashboard, unit, integration, contract and evaluation tests, and deployment manifests. A Cloud Run API is deployed and, as of 20 November 2026, 09:47 Europe/London, `/health` reported healthy using the deterministic model provider with 29 indexed knowledge-base documents. The existing infrastructure provides the foundation for evolving Aegis into a continuous organisational fragility characterisation and event-driven stress-testing platform. This is a platform in active development; nonlinear fragility measurement, convexity characterisation and antifragility assessment remain areas for implementation and empirical validation.
 
+### [AP Automation — Governed Agentic Invoice Coding](https://github.com/WaiteM124/ap-automation-public)
+
+**Problem.** Non-PO invoice coding is repetitive, but a wrong posting is a financial error. AI can help only if it never holds authority to post.
+
+**Architecture.** The first proving ground for a governed enterprise agentic AI platform: models provide evidence, policy owns decisions, and humans keep authority over financial actions. Vendor-scoped hybrid retrieval and master data feed specialist entity, VAT and cost-centre agents. A routine model makes a provisional recommendation and Claude is consulted only on configured conflicts. A versioned, fail-closed policy engine selects the strictest state (`AUTO_POST` shadow-only, `HUMAN_REVIEW`, `REJECT`, `INSUFFICIENT_EVIDENCE`), and an idempotent write-back boundary rechecks authorisation before any ERP action. See the [architecture write-up](https://github.com/WaiteM124/ap-automation-public/blob/main/ARCHITECTURE.md) and [strategy deck](https://github.com/WaiteM124/ap-automation-public/blob/main/docs/architecture-strategy.pdf).
+
+**Outcome.** A working proof of concept with FastAPI, LangGraph orchestration, SAP and Xero posting adapters, and an offline suite of 347 passing tests in CI. Published results use synthetic and public data only.
+
 ### [Miles RAG](https://github.com/WaiteM124/miles-rag)
 
 **Problem.** A retrieval-augmented assistant needs to find the right context, refuse when it cannot, and be evaluated honestly.
@@ -34,7 +42,7 @@ Further case studies, including operational invoice-coding work, are on [ai.mile
 
 ## Stack
 
-Python, FastAPI, Pydantic, pytest, ruff, React, TypeScript, Vite, Qdrant, Docker, Google Cloud Run, Firestore, and Pub/Sub.
+Python, FastAPI, LangGraph, Pydantic, pytest, ruff, React, TypeScript, Vite, Qdrant, Docker, Google Cloud Run, Firestore, and Pub/Sub.
 
 ## Links
 
