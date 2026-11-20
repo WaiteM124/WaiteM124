@@ -22,6 +22,14 @@ I build governed, evaluation-driven AI systems that reason over operational data
 
 **Outcome.** A working proof of concept with FastAPI, LangGraph orchestration, SAP and Xero posting adapters, and an offline suite of 347 passing tests in CI. Published results use synthetic and public data only.
 
+### [VaR Agent — Natural-Language Risk Analysis for a Synthetic Energy Book](https://github.com/WaiteM124/var-agent)
+
+**Problem.** Risk desks get the same questions repeatedly — what is book VaR, who is concentrated, is anyone over a limit — but an LLM must not invent the numbers or pretend to be a live risk engine.
+
+**Architecture.** A deterministic risk package filters a 15-position synthetic energy book, aggregates pre-computed 1-day VaR, runs a seeded correlated Monte Carlo, and checks illustrative notional and VaR limits, all without cloud credentials. A LangGraph agent, served by FastAPI and a Streamlit UI, answers natural-language questions by calling those tools and retrieving methodology notes from Azure AI Search. Azure clients are created only when `/query` is called. See the [worked example](https://github.com/WaiteM124/var-agent/blob/main/examples/output/summary.md) and [P&L chart](https://github.com/WaiteM124/var-agent/blob/main/examples/output/pnl_distribution.png).
+
+**Outcome.** A public proof of concept with 27 tests and ruff in CI, plus a committed Monte Carlo run (seed 42, 20,000 paths) showing a diversified 95% VaR of $970,831 against a $41.35m notional book. This is a demo, not a production ETRM.
+
 ### [Miles RAG](https://github.com/WaiteM124/miles-rag)
 
 **Problem.** A retrieval-augmented assistant needs to find the right context, refuse when it cannot, and be evaluated honestly.
