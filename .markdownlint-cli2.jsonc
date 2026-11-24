@@ -1,0 +1,11 @@
+{
+  // Profile README uses long-form prose paragraphs. MD013 would force wrapping
+  // of existing content; leave README unchanged and track wrapping as a follow-up.
+  "config": {
+    "MD013": false
+  },
+  "globs": [
+    "**/*.md",
+    "!**/node_modules/**"
+  ]
+}

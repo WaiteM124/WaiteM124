@@ -1,0 +1,32 @@
+---
+description: Core rules for the WaiteM124 GitHub profile README repository
+alwaysApply: true
+---
+
+# Core — WaiteM124 profile README
+
+## Repository identity
+
+This repository is Miles Waite's GitHub profile README
+(`github.com/WaiteM124/WaiteM124`). The root `README.md` is the profile shown
+on `github.com/WaiteM124`. It is not an application codebase.
+
+## Non-negotiables
+
+- Every claim must be factual and must match Miles's CV, LinkedIn, and live
+  projects. No invented metrics, dates, outcomes, or status.
+- Links must point to real, working repos and sites. No placeholders.
+- Do not change `README.md` content unless the user explicitly asks.
+- Do not commit secrets, tokens, private keys, or non-public personal data.
+- Keep changes scoped to the requested task.
+- State assumptions in the pull request description.
+- Never weaken CI or pre-commit checks to force a pass. Prefer explicit ignores
+  plus documented follow-ups when existing content must remain unchanged.
+
+## Workflow for agents
+
+1. Read `AGENTS.md` and this rule before editing.
+2. Prefer config and ignore changes over rewriting profile prose.
+3. Verify links and factual claims against live sources when making content
+   changes; if verification is impossible, say so in the PR.
+4. Leave existing workflows (if any) working; add checks without breaking them.
